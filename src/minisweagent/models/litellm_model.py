@@ -22,7 +22,6 @@ from minisweagent.models.utils.retry import retry
 
 logger = logging.getLogger("litellm_model")
 
-
 class LitellmModelConfig(BaseModel):
     model_name: str
     """Model name. Highly recommended to include the provider in the model name, e.g., `anthropic/claude-sonnet-4-5-20250929`."""

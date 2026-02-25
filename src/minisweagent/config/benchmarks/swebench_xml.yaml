@@ -221,7 +221,12 @@ model:
 
     If you have completed your assignment, please consult the first message about how to
     submit your solution (you will not be able to continue working on this task after that).
-  model_name: "minimax/minimax-m2"
-  model_class: openrouter
+  model_name: "hosted_vllm/smoe"
   model_kwargs:
-    temperature: 0.0
+    temperature: 1.
+    max_output_tokens: 64000
+    max_input_tokens: 64000
+    api_base: http://localhost:8000/v1
+    api_key: asdf1324
+    per_instance_cost_limit: 0.
+    per_instance_call_limit: 75
